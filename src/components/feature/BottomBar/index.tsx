@@ -19,7 +19,7 @@ const DEFAULT_ITEMS = [
 export default function BottomBar() {
   const [selected, setSelected] = useState(0)
   return (
-    <div className="flex flex-row gap-2 rounded-t-2xl bg-surface-light px-2">
+    <div className="flex flex-row gap-2 bg-surface-light px-2">
       {DEFAULT_ITEMS.map(({ title, icon }, index) => (
         <NavItem
           key={title}

@@ -14,7 +14,7 @@ type Story = StoryObj<typeof BottomBar>
 export const Default: Story = {
   name: 'Default',
   render: (args) => (
-    <div className='w-96'>
+    <div className="w-96">
       <BottomBar />
     </div>
   )
