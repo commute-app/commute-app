@@ -30,7 +30,9 @@ export default function TripData({
         <div className="grid h-10 place-content-center">
           <Typography variant={'h5'}>{stopName}</Typography>
         </div>
-        <Typography variant={'body1'}>Próxima bajada</Typography>
+        <Typography variant={'body1'} className="text-center">
+          Próxima bajada
+        </Typography>
       </div>
       <div className="flex flex-1 flex-col items-center justify-center">
         <div className="grid h-10 place-content-center">

@@ -23,11 +23,11 @@ export default function Dialog({
   return (
     <div
       className={classNames(
-        'fixed inset-0 z-50 flex items-center justify-center',
+        'absolute inset-0 z-50 flex items-center justify-center',
         { hidden: !isOpen }
       )}
     >
-      <div className="space-y-6 rounded-lg bg-surface-light p-6 shadow-lg">
+      <div className="space-y-6 rounded-lg bg-surface-light p-6 shadow-lg  max-w-[90%]">
         <div className="flex w-full items-center justify-between">
           <Typography variant="h4" className="text-black">
             {title}
