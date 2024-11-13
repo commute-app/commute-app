@@ -56,8 +56,8 @@ export default {
         800: '#00759E',
         900: '#006487'
       },
-      black: '#000000',
-      white: '#FFFFFF',
+      black: '#1E1E1E',
+      white: '#FAFAFA',
       grey: {
         200: '#CDCDCD',
         300: '#AEAEAE',
