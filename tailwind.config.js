@@ -81,7 +81,8 @@ export default {
         100: '#DF8888',
         500: '#CA3838',
         900: '#792222'
-      }
+      },
+      transparent: 'transparent',
     },
     screens: {
       mobile: '390px',
