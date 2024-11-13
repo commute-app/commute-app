@@ -19,6 +19,9 @@ export default {
         muted: '#707070'
       }
     },
+    fontFamily: {
+      quicksand: ['Quicksand', 'sans-serif']
+    },
     colors: {
       primary: {
         100: '#AC92E0',
