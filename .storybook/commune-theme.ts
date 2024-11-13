@@ -10,11 +10,11 @@ export default create({
 
     // files logo colors
     colorPrimary: "#CD65DE",
-    colorSecondary: "#AC92E0",
+    colorSecondary: "#744ACC",
 
     // UI
-    appBg: "#081924",
-    appContentBg: "#102133",
+    appBg: "#1E1E1E",
+    appContentBg: "#1E1E1E",
     appPreviewBg: "#fafafa",
     appBorderColor: "#8392fb73",
     appBorderRadius: 4,
@@ -25,9 +25,9 @@ export default create({
 
     // Toolbar default and active colors
     barTextColor: "#798186",
-    barSelectedColor: "#AC92E0",
-    barHoverColor: "#AC92E0",
-    barBg: "#102133",
+    barSelectedColor: "#744ACC",
+    barHoverColor: "#744ACC",
+    barBg: "#1E1E1E",
 
     // Form colors
     inputBg: "transparent",
