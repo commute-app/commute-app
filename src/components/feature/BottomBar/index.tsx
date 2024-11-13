@@ -16,8 +16,8 @@ const DEFAULT_ITEMS = [
   }
 ]
 
-export default function BottomBar() {
-  const [selected, setSelected] = useState(0)
+export default function BottomBar({ defaultSelected = 0 }) {
+  const [selected, setSelected] = useState(defaultSelected)
   return (
     <div className="flex flex-row gap-2 bg-surface-light px-2">
       {DEFAULT_ITEMS.map(({ title, icon }, index) => (

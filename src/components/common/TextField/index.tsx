@@ -53,13 +53,13 @@ export default function TextField({
         <div className="flex-1 *:h-8">
           <input
             type="text"
-            className="peer w-full pb-4 text-base accent-primary-500 outline-none ring-0 disabled:bg-grey-200"
+            className="bg-transparent peer w-full pb-4 text-base accent-primary-500 outline-none ring-0"
             pattern=".*[a-zA-Z].*"
             required
             {...props}
           />
           <Typography
-            variant={'body2'}
+            variant={'body1'}
             className={classNames(
               'absolute',
               'top-1/2',
@@ -74,9 +74,9 @@ export default function TextField({
               'peer-valid:!translate-y-1/4',
               'peer-focus:!translate-y-1/4',
               'peer-valid:-top-2',
-              'peer-valid:text-sm',
+              'peer-valid:!text-sm',
               'peer-focus:-top-2',
-              'peer-focus:text-sm'
+              'peer-focus:!text-sm'
             )}
           >
             {label}

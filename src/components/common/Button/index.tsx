@@ -16,13 +16,18 @@ export default function Button({
   children,
   leftIcon,
   rightIcon,
+  className,
   ...rest
 }: ButtonProps) {
   return (
-    <button className={buttonVariant({ size, variant })} {...rest}>
-      {leftIcon && <Svg className={iconVariant({ size })} name={leftIcon} />}
+    <button className={buttonVariant({ size, variant, className })} {...rest}>
+      {leftIcon && (
+        <Svg className={iconVariant({ size, variant })} name={leftIcon} />
+      )}
       {children}
-      {rightIcon && <Svg className={iconVariant({ size })} name={rightIcon} />}
+      {rightIcon && (
+        <Svg className={iconVariant({ size, variant })} name={rightIcon} />
+      )}
     </button>
   )
 }

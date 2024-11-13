@@ -23,7 +23,7 @@ export default function ConnectionCard({
         <img
           src={photoUrl}
           alt={`${name} photo`}
-          className="size-10 rounded-full"
+          className="size-10 rounded-full object-cover"
         />
         <Typography variant="h6">{name}</Typography>
       </button>

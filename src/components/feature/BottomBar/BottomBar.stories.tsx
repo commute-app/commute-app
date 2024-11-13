@@ -4,6 +4,13 @@ import BottomBar from '.'
 const meta: Meta<typeof BottomBar> = {
   title: 'Components/Feature/BottomBar',
   component: BottomBar,
+  argTypes: {
+    defaultSelected: {
+      control: {
+        type: 'number'
+      }
+    }
+  },
   tags: ['autodocs']
 }
 

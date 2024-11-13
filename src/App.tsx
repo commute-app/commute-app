@@ -1,34 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import BottomSheet from './components/common/BottomSheet'
+import Button from './components/common/Button'
+import BottomBar from './components/feature/BottomBar'
+import ConnectionCard from './components/feature/ConnectionCard'
+
+const contacts = [
+  {
+    name: 'John Doe',
+    photoUrl:
+      'https://i.pinimg.com/originals/87/14/55/8714556a52021ba3a55c8e7a3547d28c.png'
+  },
+  {
+    name: 'Jane Doe',
+    photoUrl:
+      'https://i.pinimg.com/originals/87/14/55/8714556a52021ba3a55c8e7a3547d28c.png'
+  },
+  {
+    name: 'John Smith',
+    photoUrl:
+      'https://i.pinimg.com/originals/87/14/55/8714556a52021ba3a55c8e7a3547d28c.png'
+  }
+]
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <main className="bg-map flex h-screen flex-col bg-contain bg-no-repeat">
+      <div className="flex-1"></div>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <BottomSheet>
+          <div className="space-y-4">
+            {contacts.map((contact, index) => (
+              <ConnectionCard key={index} {...contact} />
+            ))}
+            <div className="grid place-content-center">
+              <Button
+                variant={'outlined'}
+                leftIcon="plus-sign"
+                className="!w-fit"
+              >
+                Conectar
+              </Button>
+            </div>
+          </div>
+        </BottomSheet>
+        <BottomBar defaultSelected={1} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </main>
   )
 }
 
