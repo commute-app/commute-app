@@ -24,7 +24,7 @@ const contacts = [
 
 export default function Home() {
   return (
-    <main className="bg-map flex h-screen flex-col bg-contain bg-no-repeat">
+    <main className="bg-map flex h-screen w-[350px] flex-col bg-contain bg-no-repeat overflow-hidden">
       <div className="flex-1 p-4">
         <SearchBar
           onMenuClose={() => {}}
