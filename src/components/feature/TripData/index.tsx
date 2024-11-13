@@ -1,6 +1,4 @@
-import LeftCorner from '../../../assets/svg/LeftCorner'
-import RightCorner from '../../../assets/svg/RightCorner'
-import StraightArrow from '../../../assets/svg/Straight'
+import Svg from '../../common/Svg'
 import Typography from '../../common/Typography'
 
 interface TripDataProps {
@@ -16,16 +14,16 @@ export default function TripData({
   stopName,
   timeRemaining
 }: TripDataProps) {
-  const DirectionIcon = {
-    right: RightCorner,
-    left: LeftCorner,
-    straight: StraightArrow
+  const directionIcon = {
+    right: 'right-arrow',
+    left: 'left-arrow',
+    straight: 'straight-arrow'
   }[direction]
 
   return (
     <div className="flex flex-row items-stretch rounded-b-[28px] bg-surface-light py-4">
       <div className="flex flex-1 flex-col items-center justify-center">
-        <DirectionIcon className="size-10" />
+        <Svg className="size-10" name={directionIcon} />
         <Typography variant={'body1'}>{distance}</Typography>
       </div>
       <div className="flex flex-1 flex-col items-center justify-center">

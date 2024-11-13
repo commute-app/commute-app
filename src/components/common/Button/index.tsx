@@ -1,27 +1,28 @@
 import type { VariantProps } from 'class-variance-authority'
 import { ButtonHTMLAttributes } from 'react'
 import { buttonVariant, iconVariant } from './variants'
+import Svg from '../Svg'
 
 export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariant> {
-  leftIcon?: React.ElementType
-  rightIcon?: React.ElementType
+  leftIcon?: string
+  rightIcon?: string
 }
 
 export default function Button({
   variant,
   size,
   children,
-  leftIcon: LeftIcon,
-  rightIcon: RightIcon,
+  leftIcon,
+  rightIcon,
   ...rest
 }: ButtonProps) {
   return (
     <button className={buttonVariant({ size, variant })} {...rest}>
-      {LeftIcon && <LeftIcon className={iconVariant({ size })} />}
+      {leftIcon && <Svg className={iconVariant({ size })} name={leftIcon} />}
       {children}
-      {RightIcon && <RightIcon className={iconVariant({ size })} />}
+      {rightIcon && <Svg className={iconVariant({ size })} name={rightIcon} />}
     </button>
   )
 }

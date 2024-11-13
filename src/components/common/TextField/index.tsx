@@ -2,6 +2,7 @@ import Typography from '../Typography'
 import { InputHTMLAttributes } from 'react'
 import { cva, VariantProps } from 'class-variance-authority'
 import classNames from 'classnames'
+import Svg from '../Svg'
 
 const textFieldVariants = cva([], {
   variants: {
@@ -20,14 +21,14 @@ interface TextFieldProps
     VariantProps<typeof textFieldVariants> {
   label: string
   error?: string
-  icon?: React.ElementType
+  icon?: string
 }
 
 export default function TextField({
   variant,
   error,
   label,
-  icon: Icon,
+  icon,
   ...props
 }: TextFieldProps) {
   return (
@@ -81,7 +82,7 @@ export default function TextField({
             {label}
           </Typography>
         </div>
-        {Icon && <Icon className="h-6 w-6 shrink-0" />}
+        {icon && <Svg className="h-6 w-6 shrink-0" name={icon} />}
       </div>
       {error && !props.disabled && (
         <Typography variant="body3" className="mt-1 text-left text-error-500">

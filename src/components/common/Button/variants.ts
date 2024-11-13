@@ -23,9 +23,9 @@ export const buttonVariant = cva(
           'disabled:bg-grey-500 disabled:text-grey-800'
         ],
         outlined: [
-          'text-primary-500 border border-primary-500 bg-white',
+          'text-primary-500 border border-primary-500 bg-transparent',
           'hover:bg-primary-100',
-          'disabled:border-grey-700 disabled:bg-white disabled:text-grey-700'
+          'disabled:border-grey-700 disabled:text-grey-700'
         ],
         ghost: [
           'bg-transparent text-primary-500',

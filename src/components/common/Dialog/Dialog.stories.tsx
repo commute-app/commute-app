@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
 import Dialog from '.'
-import StraightArrow from '../../../assets/svg/Straight'
 const meta: Meta<typeof Dialog> = {
   title: 'Components/Common/Dialog',
   component: Dialog,
@@ -17,19 +16,14 @@ const meta: Meta<typeof Dialog> = {
     isOpen: {
       control: { type: 'boolean' },
       defaultValue: true
-    },
-    hasIcon: {
-      control: { type: 'boolean' },
-      defaultValue: false
-    },
-    icon: StraightArrow
+    }
   },
   args: {
     onClose: () => alert('Dialog closed'),
     onAction: () => alert('Action triggered'),
     isOpen: true,
     description: 'This is a description for the dialog component.',
-    title: "Title"
+    title: 'Title'
   }
 }
 
@@ -38,28 +32,17 @@ export default meta
 type Story = StoryObj<typeof Dialog>
 
 export const Default: Story = {
+  args: {
+    icon: 'left-arrow'
+  },
+
   name: 'Default',
   render: (args) => <Dialog {...args} />
 }
 
 export const WithIcon: Story = {
-  args: {
-    hasIcon: true
-  },
-
   name: 'With Icon',
-  render: (args) => <Dialog {...args} hasIcon icon={StraightArrow} />
-}
-
-export const CustomTitleAndDescription: Story = {
-  name: 'Custom Title and Description',
-  render: (args) => (
-    <Dialog
-      {...args}
-      title="Custom Title"
-      description="This is a custom description for the dialog component."
-    />
-  )
+  render: (args) => <Dialog {...args} icon={'straight-arrow'} />
 }
 
 export const Closed: Story = {
