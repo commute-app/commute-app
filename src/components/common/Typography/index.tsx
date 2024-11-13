@@ -1,6 +1,7 @@
 import type { VariantProps } from 'class-variance-authority'
 import { createElement, HTMLAttributes } from 'react'
 import { typographyVariants } from './variants'
+import classNames from 'classnames'
 
 type TypographyVariants =
   | 'h1'
@@ -37,12 +38,16 @@ interface TypographyProps
 export default function Typography({
   variant = 'body1',
   children,
+  className,
   ...props
 }: TypographyProps) {
   // typescript como no te vas a dar cuenta que variant no es null
   return createElement(
     tags[variant ?? 'body1'],
-    { className: typographyVariants({ variant }), ...props },
+    {
+      className: classNames(typographyVariants({ variant }), className),
+      ...props
+    },
     children
   )
 }
