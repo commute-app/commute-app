@@ -10,7 +10,9 @@ export const buttonVariant = cva(
     'items-center',
     'justify-center',
     'font-semibold',
-    'tracking-normal'
+    'tracking-normal',
+    'transition-all',
+    'duration-300',
   ],
   {
     variants: {

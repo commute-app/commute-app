@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       backgroundColor: {
-        light: '#F0ECFA',
-        medium: '#D3D9E1',
-        dark: '#3A2E55',
-        card: '#F7F9FC',
-        panel: '#E5EAF2',
-        accent: '#C1DFF2'
+        'surface-light': '#F0ECFA',
+        'surface-medium': '#D3D9E1',
+        'surface-dark': '#3A2E55',
+        'surface-card': '#F7F9FC',
+        'surface-panel': '#E5EAF2',
+        'surface-accent': '#C1DFF2'
       },
       textColor: {
         // primary: '#1C1B1F',
