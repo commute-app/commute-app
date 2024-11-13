@@ -12,7 +12,6 @@ export default {
         'surface-accent': '#C1DFF2'
       },
       textColor: {
-        // primary: '#1C1B1F',
         secondary: '#4A4A57',
         'secondary-light': '#D0D0D5',
         body: '#33333D',
@@ -57,6 +56,7 @@ export default {
         900: '#006487'
       },
       black: '#1E1E1E',
+      dark: '#1C1B1F',
       white: '#FAFAFA',
       grey: {
         200: '#CDCDCD',
