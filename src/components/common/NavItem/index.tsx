@@ -3,7 +3,15 @@ import Svg from '../Svg'
 import Typography from '../Typography'
 
 const navItemVariants = cva(
-  ['px-5', 'py-1', 'rounded-2xl', 'flex', 'items-center', 'justify-center'],
+  [
+    'px-5',
+    'py-1',
+    'rounded-2xl',
+    'flex',
+    'items-center',
+    'justify-center',
+    'w-fit'
+  ],
   {
     variants: {
       selected: {
@@ -17,15 +25,17 @@ const navItemVariants = cva(
 export interface NavItemProps extends VariantProps<typeof navItemVariants> {
   icon: string
   title: string
+  onClick?: () => void
 }
 
 export default function NavItem({
   icon,
   title,
+  onClick,
   selected = false
 }: NavItemProps) {
   return (
-    <div className="py-3">
+    <div className="flex flex-1 flex-col items-center py-3" onClick={onClick}>
       <div className={navItemVariants({ selected })}>
         <Svg className="size-6 stroke-2" name={icon} />
       </div>

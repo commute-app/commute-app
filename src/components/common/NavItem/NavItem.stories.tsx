@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 import NavItem from '.'
+import { fn } from '@storybook/test'
 
 const meta: Meta<typeof NavItem> = {
   title: 'Components/Common/NavItem',
@@ -13,7 +14,8 @@ const meta: Meta<typeof NavItem> = {
   },
   args: {
     icon: 'marker',
-    title: 'Mapa'
+    title: 'Mapa',
+    onClick: fn()
   }
 }
 
@@ -24,10 +26,6 @@ type Story = StoryObj<typeof NavItem>
 export const Default: Story = {
   name: 'Default',
   render: (args) => <NavItem {...args} />
-}
-export const UnSelected: Story = {
-  name: 'UnSelected',
-  render: (args) => <NavItem selected={false} {...args} />
 }
 
 export const Selected: Story = {
