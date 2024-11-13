@@ -23,7 +23,7 @@ export const buttonVariant = cva(
         outlined: [
           'text-primary-500 border border-primary-500 bg-white',
           'hover:bg-primary-100',
-          'disabled:border-grey-700 disabled:text-grey-700'
+          'disabled:border-grey-700 disabled:text-grey-700 disabled:bg-white'
         ],
         ghost: [
           'bg-transparent text-primary-500',

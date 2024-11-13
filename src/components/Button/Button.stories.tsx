@@ -42,13 +42,7 @@ export const Fulfilled: Story = {
     <div
       className={'flex w-[250px] flex-col items-center justify-center gap-2'}
     >
-      <Button variant={'fulfilled'} size={'large'} {...args}>
-        Button
-      </Button>
-      <Button variant={'fulfilled'} size={'medium'} {...args}>
-        Button
-      </Button>
-      <Button variant={'fulfilled'} size={'small'} {...args}>
+      <Button variant={'fulfilled'} {...args}>
         Button
       </Button>
     </div>
@@ -60,13 +54,7 @@ export const Outlined: Story = {
     <div
       className={'flex w-[250px] flex-col items-center justify-center gap-2'}
     >
-      <Button variant={'outlined'} size={'large'} {...args}>
-        Button
-      </Button>
-      <Button variant={'outlined'} size={'medium'} {...args}>
-        Button
-      </Button>
-      <Button variant={'outlined'} size={'small'} {...args}>
+      <Button variant={'outlined'} {...args}>
         Button
       </Button>
     </div>
@@ -79,13 +67,7 @@ export const Ghost: Story = {
     <div
       className={'flex w-[250px] flex-col items-center justify-center gap-2'}
     >
-      <Button variant={'ghost'} size={'large'} {...args}>
-        Button
-      </Button>
-      <Button variant={'ghost'} size={'medium'} {...args}>
-        Button
-      </Button>
-      <Button variant={'ghost'} size={'small'} {...args}>
+      <Button variant={'ghost'} {...args}>
         Button
       </Button>
     </div>
