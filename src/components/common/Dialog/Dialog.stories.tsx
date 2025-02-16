@@ -33,7 +33,7 @@ type Story = StoryObj<typeof Dialog>
 
 export const Default: Story = {
   args: {
-    icon: 'left-arrow'
+    icon: 'right-arrow'
   },
 
   name: 'Default',

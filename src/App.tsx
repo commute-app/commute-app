@@ -3,6 +3,7 @@ import BottomSheet from './components/common/BottomSheet'
 import Button from './components/common/Button'
 import BottomBar from './components/feature/BottomBar'
 import ConnectionCard from './components/feature/ConnectionCard'
+import SearchBar from './components/feature/SearchBar'
 
 const contacts = [
   {
@@ -25,7 +26,13 @@ const contacts = [
 function App() {
   return (
     <main className="bg-map flex h-screen flex-col bg-contain bg-no-repeat">
-      <div className="flex-1"></div>
+      <div className="flex-1 p-4">
+        <SearchBar
+          onMenuClose={() => {}}
+          onMenuOpen={() => {}}
+          onSearch={() => {}}
+        />
+      </div>
       <div>
         <BottomSheet>
           <div className="space-y-4">
