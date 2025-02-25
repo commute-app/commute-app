@@ -1,3 +1,4 @@
+import { Icon } from '../../../types'
 import Button from '../Button'
 import Svg from '../Svg'
 import Typography from '../Typography'
@@ -7,7 +8,7 @@ interface DialogProps {
   title: string
   isOpen: boolean
   description: string
-  icon?: string
+  icon?: Icon
   onClose: () => void
   onAction?: () => void
 }

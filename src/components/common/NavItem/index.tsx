@@ -1,6 +1,7 @@
 import { cva, VariantProps } from 'class-variance-authority'
 import Svg from '../Svg'
 import Typography from '../Typography'
+import { Icon } from '../../../types'
 
 const navItemVariants = cva(
   [
@@ -23,7 +24,7 @@ const navItemVariants = cva(
 )
 
 export interface NavItemProps extends VariantProps<typeof navItemVariants> {
-  icon: string
+  icon: Icon
   title: string
   onClick?: () => void
 }
