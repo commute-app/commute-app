@@ -53,14 +53,8 @@ export const iconVariant = cva(['shrink-0'], {
       medium: ['h-5 w-5'],
       large: ['h-6 w-6']
     },
-    variant: {
-      fulfilled: ['stroke-white', 'disabled:stroke-grey-800'],
-      outlined: ['stroke-primary-500', 'disabled:stroke-grey-700'],
-      ghost: ['stroke-primary-500', 'disabled:stroke-grey-700']
-    }
   },
   defaultVariants: {
     size: 'medium',
-    variant: 'fulfilled'
   }
 })
