@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 import ConnectionCard from '.'
+import { PLACEHOLDER_IMAGE } from '@/cons'
 
 const meta: Meta<typeof ConnectionCard> = {
   title: 'Components/Feature/ConnectionCard',
@@ -18,7 +19,7 @@ const meta: Meta<typeof ConnectionCard> = {
   },
   args: {
     name: 'John Doe',
-    photoUrl: 'https://via.placeholder.com/150',
+    photoUrl: PLACEHOLDER_IMAGE,
     initiallyOpen: false
   }
 }

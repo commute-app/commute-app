@@ -2,7 +2,7 @@ import { cva } from 'class-variance-authority'
 
 export const iconButtonVariant = cva(
   [
-    'sm:w-fit w-full',
+    'w-fit',
     'rounded-3xl',
     'flex',
     'flex-row',

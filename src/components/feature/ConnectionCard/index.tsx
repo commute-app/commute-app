@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Typography from '../../common/Typography'
 import Button from '../../common/Button'
 import classNames from 'classnames'
+import { PLACEHOLDER_IMAGE } from '@/cons'
 
 interface ConnectionCardProps {
   name: string
@@ -10,12 +11,12 @@ interface ConnectionCardProps {
 }
 export default function ConnectionCard({
   name,
-  photoUrl = 'https://via.placeholder.com/150',
+  photoUrl = PLACEHOLDER_IMAGE,
   initiallyOpen = false
 }: ConnectionCardProps) {
   const [isOpen, setIsOpen] = useState<boolean>(initiallyOpen)
   return (
-    <div className="bg-surface-light overflow-hidden rounded-xl">
+    <div className="overflow-hidden rounded-xl bg-surface-light">
       <button
         className="flex w-full flex-row items-center gap-4 p-4"
         onClick={() => setIsOpen(!isOpen)}
