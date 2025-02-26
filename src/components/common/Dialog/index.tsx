@@ -35,7 +35,7 @@ export default function Dialog({
           </Typography>
           {icon && (
             <div className="rounded-full p-2">
-              <Svg className="size-6 text-white" name={icon} />
+              <Svg className="size-6" name={icon} />
             </div>
           )}
         </div>
