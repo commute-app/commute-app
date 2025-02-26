@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority'
 export const iconButtonVariant = cva(
   [
     'w-fit',
-    'rounded-3xl',
+    'rounded-full',
     'flex',
     'flex-row',
     'gap-2',
@@ -32,9 +32,9 @@ export const iconButtonVariant = cva(
         ]
       },
       size: {
-        small: ['px-2 py-2 text-xs'],
-        medium: ['px-2 py-2 text-sm'],
-        large: ['px-2 py-2 text-base']
+        small: ['p-2'],
+        medium: ['p-3'],
+        large: ['p-4']
       },
       colorScheme: {
         primary: '',
@@ -85,8 +85,8 @@ export const iconVariant = cva(['shrink-0'], {
   variants: {
     size: {
       small: ['h-6 w-6'],
-      medium: ['h-7 w-7'],
-      large: ['h-8 w-8']
+      medium: ['h-6 w-6'],
+      large: ['h-6 w-6']
     },
   },
   defaultVariants: {

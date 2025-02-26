@@ -1,3 +1,4 @@
+import { Icon } from '@/types'
 import Svg from '../../common/Svg'
 import Typography from '../../common/Typography'
 
@@ -23,7 +24,7 @@ export default function TripData({
   return (
     <div className="flex flex-row items-stretch rounded-b-[28px] bg-surface-light py-4">
       <div className="flex flex-1 flex-col items-center justify-center">
-        <Svg className="size-10" name={directionIcon} />
+        <Svg className="size-10" name={directionIcon as Icon} />
         <Typography variant={'body1'}>{distance}</Typography>
       </div>
       <div className="flex flex-1 flex-col items-center justify-center">

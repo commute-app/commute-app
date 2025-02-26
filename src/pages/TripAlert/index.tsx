@@ -7,7 +7,7 @@ export default function TripAlert() {
   const [isOpen, setIsOpen] = useState(true)
 
   return (
-    <main className="flex h-screen w-[340px] flex-col overflow-hidden bg-map bg-contain bg-no-repeat relative">
+    <main className="relative flex h-screen w-[340px] flex-col overflow-hidden bg-map bg-contain bg-no-repeat">
       <div className="flex-1">
         <TripData
           direction="right"

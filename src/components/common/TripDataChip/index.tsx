@@ -2,19 +2,27 @@ import classNames from 'classnames'
 import Svg from '../Svg'
 import { Icon } from '../../../types'
 import Typography from '../Typography'
+import { VariantProps } from 'class-variance-authority'
+import { iconVariant, tripDataChipVariant, typographyVariant } from './variants'
 
-interface TripDataChipProps {
+interface TripDataChipProps
+  extends VariantProps<typeof tripDataChipVariant>,
+    VariantProps<typeof iconVariant> {
   icon: Icon
   value: string
 }
-
-export default function TripDataChip({ icon, value }: TripDataChipProps) {
+export default function TripDataChip({
+  icon,
+  value,
+  orientation,
+  size
+}: TripDataChipProps) {
   return (
-    <div className="flex w-fit flex-row items-stretch gap-1 text-black">
-      <Svg name={icon} size="16" className={'size-4 shrink-0'} />
+    <div className={tripDataChipVariant({ orientation })}>
+      <Svg name={icon} size="16" className={iconVariant({ size })} />
       <Typography
         variant="body3"
-        className={classNames('rounded-[4px] px-1', {
+        className={classNames(typographyVariant({ size }), {
           'bg-primary-200': icon === 'train',
           'bg-warning-500': icon === 'bus'
         })}
