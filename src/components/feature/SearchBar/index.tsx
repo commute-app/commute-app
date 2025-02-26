@@ -20,7 +20,7 @@ export default function SearchBar({ location = '', onSearch }: SearchBarProps) {
   }
 
   return (
-    <div className="flex flex-row gap-2 rounded-full bg-surface-light p-2 pr-4">
+    <div className="flex flex-1 flex-row gap-2 rounded-full bg-surface-light p-2 pr-4">
       <IconButton
         icon="search"
         onClick={handleSearchSubmit}

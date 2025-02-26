@@ -16,6 +16,7 @@ export type Icon =
     | "chevron-up"
     | "clear"
     | "clock"
+    | "compass"
     | "cross"
     | "drag-handle"
     | "eye-off"

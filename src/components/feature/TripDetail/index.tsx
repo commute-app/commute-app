@@ -161,7 +161,7 @@ export default function TripDetail({
         })}
       </div>
       <div className="absolute bottom-0 flex w-full flex-row items-center justify-between gap-4 bg-white px-5 py-2 shadow-[0px_6px_12px_0px]">
-        <div className="flex w-1/3 flex-row items-center gap-2">
+        <div className="flex w-full flex-row items-center gap-2">
           <Button
             size="small"
             leftIcon="cross"
@@ -169,8 +169,13 @@ export default function TripDetail({
           >
             Cancelar
           </Button>
-          <Button size="small" leftIcon="pencil" variant="fulfilled">
-            Editar
+          <Button
+            size="small"
+            leftIcon="pencil"
+            variant="fulfilled"
+            className="whitespace-nowrap"
+          >
+            Cambiar ruta
           </Button>
           <Button size="small" leftIcon="arrow-left" variant="ghost">
             Volver

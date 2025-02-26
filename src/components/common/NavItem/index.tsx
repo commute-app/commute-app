@@ -41,8 +41,8 @@ export default function NavItem({
         <Svg className="size-6 stroke-2" name={icon} />
       </div>
       <Typography
-        variant={'body1'}
-        className="text-center !font-bold tracking-wide"
+        variant={'body3'}
+        className="text-center tracking-wide"
       >
         {title}
       </Typography>

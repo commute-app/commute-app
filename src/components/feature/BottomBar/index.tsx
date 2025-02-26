@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import NavItem from '../../common/NavItem'
+import { Icon } from '@/types'
 
 const DEFAULT_ITEMS = [
   {
@@ -24,7 +25,7 @@ export default function BottomBar({ defaultSelected = 0 }) {
         <NavItem
           key={title}
           title={title}
-          icon={icon}
+          icon={icon as Icon}
           onClick={() => {
             setSelected(index)
           }}

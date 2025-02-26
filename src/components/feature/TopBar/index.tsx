@@ -8,7 +8,7 @@ interface TopBarProps {
 
 export default function TopBar({ notificationCount = 0 }: TopBarProps) {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 w-full">
       <SearchBar onSearch={() => {}} />
       <div className="relative">
         <IconButton icon="bell" size="large" />
