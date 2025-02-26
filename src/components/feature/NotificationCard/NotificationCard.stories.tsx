@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
 import NotificationCard from '@/components/feature/NotificationCard/index.tsx'
 import { PLACEHOLDER_IMAGE } from '@/cons'
+import { fn } from '@storybook/test'
 
 const meta: Meta<typeof NotificationCard> = {
   title: 'Components/Feature/NotificationCard',
@@ -25,7 +26,9 @@ const meta: Meta<typeof NotificationCard> = {
   args: {
     name: 'John Doe',
     photoUrl: PLACEHOLDER_IMAGE,
-    type: 'edit'
+    type: 'edit',
+    onClose: fn(),
+    onClick: fn()
   }
 }
 

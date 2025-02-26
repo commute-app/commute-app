@@ -7,6 +7,7 @@ interface NotificationCardProps {
   type: 'edit' | 'proposal' | 'trip' | 'invite';
   destination?: string;
   onClose?: () => void;
+  onClick?: () => void
 }
 
 export default function NotificationCard(
@@ -16,6 +17,7 @@ export default function NotificationCard(
     type,
     destination,
     onClose,
+    onClick
   }: NotificationCardProps
 ) {
   const getMessage = () => {
@@ -37,7 +39,7 @@ export default function NotificationCard(
 
   return (
     <div className="flex items-center justify-between w-full p-2">
-      <div className="flex flex-row items-center gap-3 flex-1 min-w-0">
+      <div className="flex flex-row items-center gap-3 flex-1 min-w-0 cursor-pointer" onClick={onClick}>
         <img src={photoUrl} alt={name} className="w-12 h-12 rounded-full flex-shrink-0" />
 
         {/* Notification Text */}
