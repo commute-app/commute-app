@@ -73,16 +73,3 @@ export const Ghost: Story = {
     </div>
   )
 }
-
-export const WithIcon: Story = {
-  name: 'With Icon',
-  render: (args) => (
-    <div
-      className={'flex w-[250px] flex-col items-center justify-center gap-2'}
-    >
-      <Button {...args} leftIcon="alert" rightIcon="alert">
-        Button
-      </Button>
-    </div>
-  )
-}
