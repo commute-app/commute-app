@@ -3,8 +3,8 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      backgroundImage:{
-        'map': "url('/map-bg.png')",
+      backgroundImage: {
+        map: "url('/map-bg.png')"
       },
       backgroundColor: {
         'surface-light': '#F0ECFA',
@@ -16,7 +16,6 @@ export default {
       },
       textColor: {
         secondary: '#4A4A57',
-        'secondary-light': '#D0D0D5',
         body: '#33333D',
         muted: '#707070'
       }
@@ -25,6 +24,7 @@ export default {
       quicksand: ['Quicksand', 'sans-serif']
     },
     colors: {
+      'secondary-light': '#D0D0D5',
       primary: {
         100: '#AC92E0',
         200: '#9E80DB',
@@ -85,7 +85,7 @@ export default {
         500: '#CA3838',
         900: '#792222'
       },
-      transparent: 'transparent',
+      transparent: 'transparent'
     },
     screens: {
       mobile: '390px',
