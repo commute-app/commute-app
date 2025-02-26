@@ -1,8 +1,9 @@
+import { Icon } from '@/types'
 import { parse } from 'node-html-parser'
 import type { HTMLElement } from 'node-html-parser'
 
 interface Props {
-  name: string
+  name: Icon
   [key: string]: string
 }
 
